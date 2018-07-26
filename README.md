@@ -19,7 +19,7 @@ npm install
 Then, execute storybook with the following command:
 
 ```bash
-npm run Storybook
+npm run storybook
 ```
 
 Finally, go to `http://localhost:<port>` to see the book.
