@@ -36,7 +36,7 @@ pre {
   display: flex;
   justify-content: center;
   padding: 15px; }
-  .buttons-container mate-button {
+  .buttons-container button {
     margin: 0 10px; }
 
 .label {

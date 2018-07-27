@@ -1,7 +1,8 @@
 import React from 'react';
-import '../index';
 import { storiesOf } from '@storybook/react';
-import Prism from '@maji/react-prism'
+import { action } from '@storybook/addon-actions';
+import Prism from '@maji/react-prism';
+import { Button } from '@belatrix/mate/dist/main';
 
 storiesOf('Button', module)
   .add('Basics', () => (
@@ -15,18 +16,40 @@ storiesOf('Button', module)
       <label className="label">Code:</label>
       <Prism language="javascript">
       {`
-        <mate-button type="primary">Primary button</mate-button>
-        <mate-button type="secondary">Secondary button</mate-button>
-        <mate-button type="primary" size="xs">Primary small</mate-button>
-        <mate-button type="secondary" size="xs">Secondary small</mate-button>
+        <Button type="primary">Primary button</Button>
+        <Button type="secondary">Secondary button</Button>
+        <Button type="primary" size="xs">Primary small</Button>
+        <Button type="secondary" size="xs">Secondary small</Button>
       `}
       </Prism>
       <label className="label">Result:</label>
       <section className="buttons-container">
-        <mate-button type="primary">Primary button</mate-button>
-        <mate-button type="secondary">Secondary button</mate-button>
-        <mate-button type="primary" size="xs">Primary small</mate-button>
-        <mate-button type="secondary" size="xs">Secondary small</mate-button>
+        <Button
+          type="primary"
+          onClick={action('button-click')}
+        >
+          Primary button
+        </Button>
+        <Button
+          type="secondary"
+          onClick={action('button-click')}
+        >
+          Secondary button
+        </Button>
+        <Button
+          type="primary"
+          size="xs"
+          onClick={action('button-click')}
+        >
+          Primary small
+        </Button>
+        <Button
+          type="secondary"
+          size="xs"
+          onClick={action('button-click')}
+        >
+          Secondary small
+        </Button>
       </section>
     </main>
   ))
@@ -41,40 +64,44 @@ storiesOf('Button', module)
       <label className="label">Code:</label>
       <Prism language="javascript">
       {`
-        <mate-button type="primary" outline>Primary outlined</mate-button>
-        <mate-button type="secondary" outline>Secondary outlined</mate-button>
-        <mate-button type="primary" size="xs" outline>Primary small</mate-button>
-        <mate-button type="secondary" size="xs" outline>Secondary small</mate-button>
+        <Button type="primary" outline>Primary outlined</Button>
+        <Button type="secondary" outline>Secondary outlined</Button>
+        <Button type="primary" size="xs" outline>Primary small</Button>
+        <Button type="secondary" size="xs" outline>Secondary small</Button>
       `}
       </Prism>
       <label className="label">Result:</label>
       <section className="buttons-container">
-        <mate-button
+        <Button
           type="primary"
           outline
+          onClick={action('button-click')}
         >
           Primary outlined
-        </mate-button>
-        <mate-button
+        </Button>
+        <Button
           type="secondary"
           outline
+          onClick={action('button-click')}
         >
           Secondary outlined
-        </mate-button>
-        <mate-button
+        </Button>
+        <Button
           type="primary"
           size="xs"
           outline
+          onClick={action('button-click')}
         >
           Primary small
-        </mate-button>
-        <mate-button
+        </Button>
+        <Button
           type="secondary"
           size="xs"
           outline
+          onClick={action('button-click')}
         >
           Secondary small
-        </mate-button>
+        </Button>
       </section>
     </main>
   ))
@@ -89,53 +116,57 @@ storiesOf('Button', module)
       <label className="label">Code:</label>
       <Prism language="javascript">
       {`
-        <mate-button type="primary" fab>
+        <Button type="primary" fab>
           <i className="fas fa-pen"></i>
-        </mate-button>
+        </Button>
 
-        <mate-button type="secondary" icon>
+        <Button type="secondary" icon>
           <i className="fab fa-edge"></i>
-        </mate-button>
+        </Button>
 
-        <mate-button type="primary" size="xs" fab outline>
+        <Button type="primary" size="xs" fab outline>
           <i className="far fa-bell"></i>
-        </mate-button>
+        </Button>
 
-        <mate-button type="secondary" size="xs" icon outline>
+        <Button type="secondary" size="xs" icon outline>
           <i className="far fa-heart"></i>
-        </mate-button>
+        </Button>
       `}
       </Prism>
       <label className="label">Result:</label>
       <section className="buttons-container">
-        <mate-button
+        <Button
           type="primary"
           fab
+          onClick={action('button-click')}
         >
           <i className="fas fa-pen"></i>
-        </mate-button>
-        <mate-button
+        </Button>
+        <Button
           type="secondary"
           icon
+          onClick={action('button-click')}
         >
           <i className="fab fa-edge"></i>
-        </mate-button>
-        <mate-button
+        </Button>
+        <Button
           type="primary"
           size="xs"
           fab
           outline
+          onClick={action('button-click')}
         >
           <i className="far fa-bell"></i>
-        </mate-button>
-        <mate-button
+        </Button>
+        <Button
           type="secondary"
           size="xs"
           icon
           outline
+          onClick={action('button-click')}
         >
           <div className="far fa-heart"></div>
-        </mate-button>
+        </Button>
       </section>
     </main>
   ))
@@ -152,61 +183,65 @@ storiesOf('Button', module)
       <Prism language="javascript">
       {`
 
-        <mate-button type="primary" featured>
+        <Button type="primary" featured>
           <i className="fas fa-map-marker-alt"></i>
           <span>See on maps</span>
-        </mate-button>
+        </Button>
 
-        <mate-button type="secondary" featured>
+        <Button type="secondary" featured>
           <i className="fas fa-link"></i>
           <span>Attach document</span>
-        </mate-button>
+        </Button>
 
-        <mate-button type="primary" size="xs" outline featured>
+        <Button type="primary" size="xs" outline featured>
           <i className="fas fa-heart"></i>
           <span>Add to favorites</span>
-        </mate-button>
+        </Button>
 
-        <mate-button type="secondary" size="xs" outline featured>
+        <Button type="secondary" size="xs" outline featured>
           <i className="fas fa-info-circle"></i>
           <span>More information</span>
-        </mate-button>
+        </Button>
       `}
       </Prism>
       <span className="label">Result:</span>
       <div className="buttons-container">
-        <mate-button
+        <Button
           type="primary"
           featured
+          onClick={action('button-click')}
         >
           <i className="fas fa-map-marker-alt"></i>
           <span>See on maps</span>
-        </mate-button>
-        <mate-button
+        </Button>
+        <Button
           type="secondary"
           featured
+          onClick={action('button-click')}
         >
           <i className="fas fa-link"></i>
           <span>Attach document</span>
-        </mate-button>
-        <mate-button
+        </Button>
+        <Button
           type="primary"
           size="xs"
           outline
           featured
+          onClick={action('button-click')}
         >
           <i className="fas fa-heart"></i>
           <span>Add to favorites</span>
-        </mate-button>
-        <mate-button
+        </Button>
+        <Button
           type="secondary"
           size="xs"
           outline
           featured
+          onClick={action('button-click')}
         >
           <i className="fas fa-info-circle"></i>
           <span>More information</span>
-        </mate-button>
+        </Button>
       </div>
     </main>
-  ))
+  ));

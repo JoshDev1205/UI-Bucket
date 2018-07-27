@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { defineCustomElements } from 'mate-ui';
 import registerServiceWorker from './registerServiceWorker';
-import './index.css'
+import './index.css';
+import '@belatrix/mate/dist/main.css';
 
-defineCustomElements(window);
 registerServiceWorker();

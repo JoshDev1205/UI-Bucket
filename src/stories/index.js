@@ -1,4 +1,5 @@
 import { configure } from '@storybook/react'
+import '../index';
 
 const req = require.context(__dirname, true, /\.story\.js$/)
 
