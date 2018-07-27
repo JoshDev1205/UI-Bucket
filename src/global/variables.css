@@ -1,0 +1,11 @@
+:root {
+  --primary: #F89937;
+  --secondary: #2196F3;
+  --gray: #444;
+
+  --font-primary: "Roboto";
+  --font-secondary: "Exo";
+
+  --btn-font-size: 12px;
+  --btn-radius: 0;
+}
