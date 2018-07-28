@@ -18,15 +18,15 @@ Mate borns with the need of standarize the user interface of our intern applicat
 
 As today, the project is in early stages. We are working on this, so, there is no a date for a preliminar version.
 
-### React
+#### React
 
-The React version is on [it's self branch](https://github.com/belatrix/ui-bucket/tree/react). To get started and contribute, please the readme.
-
+The React version is on [it's self branch](https://github.com/belatrix/ui-bucket/tree/react). To get started and contribute, please check the readme.
+#
 ### Angular
 
-The Angular version is on [it's self branch](https://github.com/belatrix/ui-bucket/tree/angular). To get started and contribute, please the readme.
+The Angular version is on [it's self branch](https://github.com/belatrix/ui-bucket/tree/angular). To get started and contribute, please check the readme.
 
-### Vue
+<h4>Vue</h4>
 
 There is no project for Vue framework for now. It's comming soon :)
 
