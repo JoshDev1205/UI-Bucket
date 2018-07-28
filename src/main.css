@@ -1,33 +1,4 @@
 @import "global/variables.css";
+@import "global/base.css";
 @import "global/typography.css";
 @import "components/button/index.css";
-
-html {
-  box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-.container {
-  padding: 40px 50px;
-
-  & .h1 {
-    margin: 30px 0;
-  }
-}
-.buttons {
-  align-items: center;
-  background-color: #f7f7f7;
-  display: flex;
-  justify-content: center;
-  margin-top: 25px;
-  padding: 20px;
-
-  & .btn {
-    margin: 0 10px;
-  }
-}

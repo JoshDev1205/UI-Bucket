@@ -25,6 +25,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.10.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "flow-bin": "^0.77.0",
     "html-webpack-plugin": "^3.2.0",
     "postcss-import": "^11.1.0",
     "postcss-loader": "^2.1.6",
@@ -38,7 +39,8 @@
   "scripts": {
     "test": "test",
     "dev": "webpack-dev-server --mode development --open",
-    "build:dev": "webpack --mode development --watch"
+    "build:dev": "webpack --mode development --watch",
+    "flow": "flow"
   },
   "repository": {
     "type": "git",

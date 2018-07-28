@@ -1,26 +1,26 @@
-// @flow
+/* @flow */
 /* eslint react/button-has-type: off */
 import React from 'react';
 import classnames from 'classnames';
-// import './index.css';
 
-interface ButtonProps {
+export interface ButtonProps {
   type?: string;
   size?: string;
   outline?: boolean;
   icon?: boolean;
   fab?: boolean;
   featured?: boolean;
-  onClick?: (e: Event) => void;
-  children: any | Array<any>;
+  onClick?: (e?: Event) => void;
+  children: any;
   htmlType?: string;
 }
 
-class Button extends React.Component<ButtonProps> {
-  static defaultProps = {
+export default class Button extends React.Component<ButtonProps> {
+  static defaultProps: ButtonProps = {
     type: 'primary',
     onClick: () => {},
-    htmlType: 'button'
+    htmlType: 'button',
+    children: []
   };
 
   buildCssClass(): string {
@@ -61,5 +61,3 @@ class Button extends React.Component<ButtonProps> {
     );
   }
 }
-
-export default Button;
