@@ -24,7 +24,7 @@ The React version is on [it's self branch](https://github.com/belatrix/ui-bucket
 
 #### Angular
 
-The Angular version is on [it's self branch](https://github.com/belatrix/ui-bucket/tree/angular). To get started and contribute, please check the readme.
+There is no project for Angular framework for now. It's comming soon :)
 
 <h4>Vue</h4>
 
