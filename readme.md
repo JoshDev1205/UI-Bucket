@@ -21,8 +21,8 @@ As today, the project is in early stages. We are working on this, so, there is n
 #### React
 
 The React version is on [it's self branch](https://github.com/belatrix/ui-bucket/tree/react). To get started and contribute, please check the readme.
-#
-### Angular
+
+#### Angular
 
 The Angular version is on [it's self branch](https://github.com/belatrix/ui-bucket/tree/angular). To get started and contribute, please check the readme.
 
