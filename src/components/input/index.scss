@@ -1,0 +1,77 @@
+.input {
+  border: 1px solid #c4c4c4;
+  color: #3c3c3c;
+  font-family: $font-alternative;
+  font-size: 14px;
+  height: 35px;
+  padding: 0 10px;
+  transition: border-color 275ms $easeOut;
+  width: 100%;
+
+  &.full-width {
+    width: 100%;
+  }
+  &:focus, &:focus + .input--icon {
+    border-color: $secondary;
+    outline: none;
+  }
+  &.input--valid {
+    border-color: $green;
+    color: $green;
+
+    & + .input--icon {
+      border-color: $green;
+      i, svg {
+        color: $green;
+      }
+    }
+  }
+  &.input--invalid {
+    border-color: $magenta;
+    color: $magenta;
+
+    & + .input--icon {
+      border-color: $magenta;
+      i, svg {
+        color: $magenta;
+      }
+    }
+  }
+  &:disabled {
+    background-color: $gray--bright;
+    border-color: $gray--light;
+    color: $gray--light;
+    cursor: not-allowed;
+  }
+  &::placeholder {
+    color: $gray--light;
+  }
+}
+.input-addon {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row-reverse;
+
+  .input {
+    border-left: 0;
+    display: inline-block;
+    flex: 1;
+    padding-left: 0;
+    width: auto;
+  }
+  .input--icon {
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #c4c4c4;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    padding: 4px;
+    transition: border-color 275ms $easeOut;
+    flex: 0 0 40px;
+
+    i, svg {
+      color: #999;
+    }
+  }
+}

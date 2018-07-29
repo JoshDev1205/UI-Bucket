@@ -1,6 +1,4 @@
-/* @flow */
-/* eslint react/button-has-type: off */
-import React from 'react';
+import * as React from 'react';
 import classnames from 'classnames';
 
 export interface ButtonProps {
@@ -10,7 +8,7 @@ export interface ButtonProps {
   icon?: boolean;
   fab?: boolean;
   featured?: boolean;
-  onClick?: (e?: Event) => void;
+  onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void;
   children: any;
   htmlType?: string;
 }
@@ -27,7 +25,7 @@ export default class Button extends React.Component<ButtonProps> {
     featured: false
   };
 
-  buildCssClass(): string {
+  private buildCssClass(): string {
     const {
       type,
       size,

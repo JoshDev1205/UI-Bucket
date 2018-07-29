@@ -1,13 +1,13 @@
 /**
  * Webpack configuration for React and PostCSS
  */
-const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const  ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: path.join(__dirname, 'src', 'main.js')
+    main: path.join(__dirname, 'src', 'main.tsx')
   },
   output: {
     path: path.join(__dirname, 'dist'),
@@ -18,14 +18,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.tsx$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
+          loader: 'awesome-typescript-loader'
         }
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
@@ -38,7 +38,7 @@ module.exports = {
               }
             },
             {
-              loader: 'postcss-loader',
+              loader: 'sass-loader',
               options: {
                 sourceMap: true
               }
@@ -59,6 +59,9 @@ module.exports = {
       filename: 'index.html'
     })
   ],
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx']
+  }
   // externals: {
   //   react: 'react',
   //   'react-dom': 'react-dom'
