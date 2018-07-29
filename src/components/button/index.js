@@ -20,7 +20,11 @@ export default class Button extends React.Component<ButtonProps> {
     type: 'primary',
     onClick: () => {},
     htmlType: 'button',
-    children: []
+    children: [],
+    outline: false,
+    icon: false,
+    fab: false,
+    featured: false
   };
 
   buildCssClass(): string {

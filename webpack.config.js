@@ -1,9 +1,9 @@
 /**
  * Webpack configuration for React and PostCSS
  */
-const path = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-// const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -12,8 +12,8 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].js',
-    library: 'mate',
-    libraryTarget: 'umd'
+    // library: 'mate',
+    // libraryTarget: 'umd'
   },
   module: {
     rules: [
@@ -34,8 +34,7 @@ module.exports = {
               loader: 'css-loader',
               options: {
                 url: false,
-                sourceMap: true,
-                // importLoaders: 1
+                sourceMap: true
               }
             },
             {
@@ -53,15 +52,15 @@ module.exports = {
     new ExtractTextPlugin(
       { filename: '[name].css' }
     ),
-    // new HtmlWebpackPlugin({
-    //   inject: false,
-    //   hash: true,
-    //   template: './src/index.html',
-    //   filename: 'index.html'
-    // })
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './src/index.html',
+      filename: 'index.html'
+    })
   ],
-  externals: {
-    react: 'react',
-    'react-dom': 'react-dom'
-  }
-}
+  // externals: {
+  //   react: 'react',
+  //   'react-dom': 'react-dom'
+  // }
+};
