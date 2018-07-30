@@ -24,7 +24,6 @@ export default class App extends React.PureComponent<{}> {
           <Button
             type="secondary"
             onClick={this.onButtonClick}
-            outline
           >
             Secondary button
           </Button>
@@ -44,6 +43,7 @@ export default class App extends React.PureComponent<{}> {
           >
             Secondary small
           </Button>
+          {/* Icon buttons */}
           <Button
             type="primary"
             onClick={this.onButtonClick}
@@ -51,11 +51,9 @@ export default class App extends React.PureComponent<{}> {
           >
             <i className="fas fa-play"></i>
           </Button>
-          {/* Icon buttons */}
           <Button
             type="secondary"
             onClick={this.onButtonClick}
-            outline
             icon
           >
             <i className="fas fa-play"></i>
@@ -64,6 +62,7 @@ export default class App extends React.PureComponent<{}> {
             type="primary"
             size="xs"
             onClick={this.onButtonClick}
+            outline
             fab
           >
             <i className="fas fa-pen"></i>
