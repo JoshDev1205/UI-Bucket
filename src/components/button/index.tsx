@@ -11,6 +11,7 @@ export interface ButtonProps {
   onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void;
   children: any;
   htmlType?: string;
+  disabled?: boolean
 }
 
 export default class Button extends React.Component<ButtonProps> {
@@ -32,7 +33,8 @@ export default class Button extends React.Component<ButtonProps> {
       outline,
       icon,
       fab,
-      featured
+      featured,
+      disabled
     } = this.props;
     return classnames(
       'btn',
@@ -49,7 +51,8 @@ export default class Button extends React.Component<ButtonProps> {
     const {
       children,
       htmlType,
-      onClick
+      onClick,
+      disabled
     } = this.props;
     const className = this.buildCssClass();
     return (
@@ -57,6 +60,7 @@ export default class Button extends React.Component<ButtonProps> {
         type={htmlType}
         className={className}
         onClick={onClick}
+        disabled={disabled}
       >
         { children }
       </button>

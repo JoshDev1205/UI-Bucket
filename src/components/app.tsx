@@ -114,6 +114,13 @@ export default class App extends React.PureComponent<{}> {
             <i className="fas fa-unlink"></i>
             <span>Remove document</span>
           </Button>
+          <Button
+            type="primary"
+            onClick={this.onButtonClick}
+            disabled
+          >
+            Primary button
+          </Button>
         </section>
         <h1 className="h1">Inputs</h1>
         <section className="inputs-container">
@@ -128,6 +135,7 @@ export default class App extends React.PureComponent<{}> {
           />
           <Input
             onChange={this.onInputChange}
+            placeholder="Search something..."
             icon={<i className="fa fa-search" />}
             withIcon
           />

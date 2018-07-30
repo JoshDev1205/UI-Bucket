@@ -76,4 +76,10 @@
       }
     }
   }
+  &:disabled {
+    background-color: $gray--silver !important;
+    border-color: $gray--light !important;
+    color: $gray--light !important;
+    cursor: not-allowed;
+  }
 }
